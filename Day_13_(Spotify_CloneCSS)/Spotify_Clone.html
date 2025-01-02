@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./Assets/logo.png" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="CSS/Spotify_Clone.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Navigation Section -->
+        <div class="nav">
+          <div class="nav-option" style="opacity: 1">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Home</a>
+          </div>
+          <div class="nav-option">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="#">Search</a>
+          </div>
+        </div>
+
+        <!-- Library Section -->
+        <div class="library">
+          <!-- Library Options -->
+          <div class="options">
+            <div class="lib-option nav-option">
+              <img src="Assets/library_icon.png" alt="" />
+              <a href="#">Your Library</a>
+            </div>
+
+            <!-- Library Icons -->
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Library Boxes -->
+          <div class="lib-boxes">
+            <!-- Box - 1 -->
+            <div class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy we'll help you</p>
+              <button class="badge">Create playlist</button>
+            </div>
+
+            <!-- Box - 2 -->
+            <div class="box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browse podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Sticky Navbar -->
+        <div class="sticky-nav">
+          <!-- Sticky Navbar Icons (Backward and Forward Icons) -->
+          <div class="sticky-nav-icons">
+            <button
+              style="
+                border: none;
+                background-color: black;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+              "
+            >
+              <img
+                src="Assets/backward_icon.png"
+                alt="Backward Icon"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  padding-right: 0.1rem;
+                  padding-top: 0.2rem;
+                "
+              />
+            </button>
+            <button
+              class="hide"
+              style="
+                border: none;
+                background-color: black;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+              "
+            >
+              <img
+                src="Assets/forward_icon.png"
+                alt="Forward Icon"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  padding-left: 0.1rem;
+                  padding-top: 0.2rem;
+                "
+              />
+            </button>
+          </div>
+
+          <!-- Sticky Navbar Options (Premium, Install App and User Profile Icon) -->
+          <div class="sticky-nav-options">
+            <button class="badge user-buttons hide">Explore Premium</button>
+            <button class="badge user-buttons dark-badge">
+              <i class="fa-regular fa-circle-down" style="margin-right: 5px"></i
+              >Install App
+            </button>
+            <button
+              class="user-buttons"
+              style="
+                border: none;
+                background-color: black;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+              "
+            >
+              <i
+                class="fa-regular fa-user"
+                style="color: white; font-size: 1rem"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <h2>Recently Played</h2>
+
+        <!-- Recently Played Cards Section -->
+        <div class="cards-container">
+          <!-- First Card In Recently Played Section -->
+          <div class="card">
+            <img
+              src="Assets/card1img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <h2>Trending now near you</h2>
+
+        <!--Trending Now Cards Section -->
+        <div class="cards-container">
+          <!-- First Card In Trending Now Section -->
+          <div class="card">
+            <img
+              src="Assets/card2img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Mahiye Jinna Sohna</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Second Card In Trending Now Section -->
+          <div class="card">
+            <img
+              src="Assets/card3img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Mere Paas Tum Ho</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Third Card In Trending Now Section -->
+          <div class="card">
+            <img
+              src="Assets/card4img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Naa Ready</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Fourth Card In Trending Now Section -->
+          <div class="card">
+            <img
+              src="Assets/card3img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Mere Paas Tum Ho</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Fifth Card In Trending Now Section -->
+          <div class="card">
+            <img
+              src="Assets/card4img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Naa Ready</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <h2>Featured Charts</h2>
+
+        <!-- Featured Charts Cards Section -->
+        <div class="cards-container">
+          <!-- First Card In Featured Charts Section -->
+          <div class="card">
+            <img
+              src="Assets/card5img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Top Songs - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Second Card In Featured Charts Section -->
+          <div class="card">
+            <img
+              src="Assets/card6img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Top Songs - India</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <!-- Third Card In Featured Charts Section -->
+          <div class="card">
+            <img
+              src="Assets/card1img.jpeg"
+              alt="Top 50 GLOBAL"
+              class="card-img"
+            />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+          <!-- Horizontal Line In Footer Section -->
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <!-- Music Player -->
+      <div class="music-player">
+        <!-- Album Section -->
+        <div class="album">
+          <!-- Album Card Section -->
+          <div class="album-card">
+            <div class="album-image">
+              <img
+                src="Assets/album_picture.jpeg"
+                alt="Album Picture"
+                height="80%"
+              />
+            </div>
+
+            <div class="album-text">
+              <p class="album-title card-title">Daylight</p>
+              <p class="album-text card-info">David Kushner</p>
+            </div>
+          </div>
+
+          <div class="album-icons">
+            <img
+              src="Assets/album_icon1.png"
+              alt="Add To Liked"
+              class="album-icon1"
+            />
+            <img
+              src="Assets/album_icon2.png"
+              alt="Minimize"
+              class="album-icon2"
+            />
+          </div>
+        </div>
+
+        <!-- Player Section -->
+        <div class="player">
+          <!-- Player Controls Section -->
+          <div class="player-controls">
+            <img
+              src="Assets/player_icon1.png"
+              alt="Toggle Shuffle"
+              class="player-controls-icons"
+            />
+            <img
+              src="Assets/player_icon2.png"
+              alt="Last Song"
+              class="player-controls-icons"
+            />
+            <img
+              src="Assets/player_icon3.png"
+              alt="Play/Pause"
+              class="player-controls-icons"
+              style="opacity: 1; height: 2rem"
+            />
+            <img
+              src="Assets/player_icon4.png"
+              alt="Next Song"
+              class="player-controls-icons"
+            />
+            <img
+              src="Assets/player_icon5.png"
+              alt="Loop"
+              class="player-controls-icons"
+            />
+          </div>
+
+          <!-- Player Playback Section -->
+          <div class="playback-bar">
+            <span class="curr-time">0:00</span>
+            <input type="range" min="0" max="100" class="progress-bar" />
+            <span class="total-time">3:33</span>
+          </div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls">
+          <div class="controls-button">
+            <img
+              src="Assets/controls_icon1.png"
+              class="controls-icon controls-icon1"
+            />
+            <img
+              src="Assets/controls_icon2.png"
+              class="controls-icon controls-icon2"
+            />
+            <img
+              src="Assets/controls_icon3.png"
+              class="controls-icon controls-icon3"
+            />
+            <img
+              src="Assets/controls_icon4.png"
+              class="controls-icon controls-icon4"
+            />
+            <img
+              src="Assets/controls_icon5.png"
+              class="controls-icon controls-icon5"
+            />
+          </div>
+
+          <div class="volume-box">
+            <input type="range" class="volume" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
