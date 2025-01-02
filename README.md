@@ -54,11 +54,11 @@ This repository is a reflection of my journey, organized into the following sect
 
 1. Clone this repository to your local machine:  
    ```bash
-   git clone https://github.com/Khushi-Mohammd/My-Web-Development-Journey.git
+   git clone https://github.com/Khushi-Mohammd/My-Web-Dev-Journey.git
    
 2. Navigate to any project or folder to explore the code:
    ```bash
-   cd My-Web-Development-Journey
+   cd My-Web-Dev-Journey
 
 3. Open the files in your favorite editor or browser.
 
