@@ -1,0 +1,12 @@
+#alpha {
+  height: 200px;
+  width: 200px;
+  background-color: #10cf06ad;
+}
+
+#opacity {
+  height: 200px;
+  width: 200px;
+  background-color: #ffa511;
+  opacity: 0.7;
+}
