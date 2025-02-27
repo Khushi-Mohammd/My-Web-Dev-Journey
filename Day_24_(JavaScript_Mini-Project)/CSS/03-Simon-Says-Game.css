@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 2rem;
+}
+
+.box1 {
+  background-color: #ffb200;
+}
+
+.box2 {
+  background-color: #eb5b00;
+}
+
+.box3 {
+  background-color: #d91656;
+}
+
+.box4 {
+  background-color: #640d5f;
+}
+
+.gameFlash {
+  background-color: white;
+}
+
+.userFlash {
+  background-color: green;
+}
