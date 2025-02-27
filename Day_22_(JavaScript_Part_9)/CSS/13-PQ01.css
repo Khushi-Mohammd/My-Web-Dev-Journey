@@ -1,0 +1,15 @@
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.blackBorder {
+  border: 2px solid black;
+}
+
+.pinkBg {
+  background-color: pink;
+}
