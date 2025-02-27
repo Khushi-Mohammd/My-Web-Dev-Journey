@@ -1,0 +1,1 @@
+On Day 14, I have learned some fundamental theories of JavaScript. This includes understanding variables, data types, operations, operator precendence etc. These concepts are essential for writing efficient and effective JavaScript code.
