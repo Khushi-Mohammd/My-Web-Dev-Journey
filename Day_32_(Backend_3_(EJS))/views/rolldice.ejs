@@ -1,0 +1,24 @@
+<!-- Declaring the document type as HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Setting the character encoding to UTF-8 for supporting various characters -->
+    <meta charset="UTF-8" />
+
+    <!-- Ensuring proper rendering and responsiveness on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Setting the title of the webpage -->
+    <title>Home Page</title>
+  </head>
+  <body>
+    <!-- Displaying the dice roll value dynamically -->
+    <h1>Dice gave value: <%= diceValue %></h1>
+
+    <!-- Checking if the dice roll value is 6 using EJS conditional statement -->
+    <% if (diceValue == 6) { %>
+    <!-- Displaying a message when the dice value is 6 -->
+    <h1>Nice! roll dice again</h1>
+    <% } %>
+  </body>
+</html>

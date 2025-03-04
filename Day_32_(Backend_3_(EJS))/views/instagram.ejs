@@ -1,0 +1,37 @@
+<!-- Including the head section from an external EJS file -->
+<%- include("includes/head.ejs") %>
+
+<body>
+  <!-- Displaying the username dynamically using EJS -->
+  <h3>This page belongs to @<%= data.name %></h3>
+  
+  <!-- Buttons for user interaction (not functional yet) -->
+  <button>Follow</button>
+  <button>Message</button>
+  
+  <!-- Displaying the number of followers and following dynamically -->
+  <p>
+    Followers: <%= data.followers %> &nbsp; &nbsp; &nbsp; &nbsp; Following:
+    <%= data.following %>
+  </p>
+  
+  <!-- Looping through all posts of the user dynamically -->
+  <% for (let post of data.posts) { %>
+    
+    <!-- Displaying the post image dynamically -->
+    <img src="<%= post.image %>" alt="some image" />
+    
+    <!-- Displaying the number of likes and comments for the post dynamically -->
+    <p>
+      Likes: <%= post.likes %> &nbsp; &nbsp; &nbsp; &nbsp; comments: <%=
+      post.comments %>
+    </p>
+  <% } %>
+  
+  <!-- Including the footer section from an external EJS file -->
+  <%- include("includes/footer.ejs") %>
+  
+  <!-- Linking the external JavaScript file for additional functionality -->
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* Styling the body element */
+body {
+  background-color: pink; /* Sets the background color of the entire page to pink */
+}
+
+/* Styling the img element */
+img {
+  height: 300px; /* Sets the height of all images to 300 pixels */
+}
