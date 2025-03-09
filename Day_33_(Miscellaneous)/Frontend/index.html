@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Miscellaneous</title>
+  </head>
+  <body>
+    <!-- Heading for the GET request form -->
+    <h2>GET request form</h2>
+
+    <!-- Form to send a GET request to the backend server at http://localhost:8080/request -->
+    <form method="get" action="http://localhost:8080/request">
+      <!-- Input field for entering a username, sent as a query parameter -->
+      <input type="text" name="user" placeholder="enter username" />
+
+      <!-- Input field for entering a password, sent as a query parameter -->
+      <input type="password" name="password" placeholder="enter password" />
+
+      <!-- Submit button to send the GET request -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <hr />
+
+    <!-- Heading for the POST request form -->
+    <h2>POST request form</h2>
+
+    <!-- Form to send a POST request to the backend server at http://localhost:8080/request -->
+    <form method="post" action="http://localhost:8080/request">
+      <!-- Input field for entering a username, sent in the request body -->
+      <input type="text" name="user" placeholder="enter username" />
+
+      <!-- Input field for entering a password, sent in the request body -->
+      <input type="password" name="password" placeholder="enter password" />
+
+      <!-- Submit button to send the POST request -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
