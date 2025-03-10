@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post in Detail</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Heading for the detailed post page -->
+    <h2>Here is your post in detail</h2>
+    <!-- Displaying the post ID -->
+    <p>Post id : <%= post.id %></p>
+
+    <div class="post">
+      <!-- Displaying the username of the post author -->
+      <h3 class="user">@<%= post.username %></h3>
+      <!-- Displaying the content of the post -->
+      <h4 class="content"><%= post.content %></h4>
+    </div>
+  </body>
+</html>

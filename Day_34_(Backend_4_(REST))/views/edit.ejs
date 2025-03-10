@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post</title>
+  </head>
+  <body>
+    <!-- Heading for the edit post page -->
+    <h2>Edit your post</h2>
+    <!-- Displaying the post ID -->
+    <p>Post id:<%= post.id %></p>
+    <!-- Displaying the post username -->
+    <p>Post username : @<%= post.username %></p>
+    <!-- Form to edit the post content, using the PATCH method via method-override -->
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+      <!-- Textarea to edit the post content, pre-filled with the current content -->
+      <textarea rows="10" cols="30" name="content">
+<%= post.content %></textarea
+      >
+      <br />
+      <!-- Submit button for the form -->
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Main heading for the page -->
+    <h1>Quora Posts</h1>
+    <!-- Looping through each post in the posts array -->
+    <% for (let post of posts) { %>
+    <div class="post">
+      <!-- Displaying the username of the post author -->
+      <h3 class="user">@<%= post.username %></h3>
+      <!-- Displaying the content of the post -->
+      <h4 class="content"><%= post.content %></h4>
+      <br />
+      <!-- Link to view the post in detail -->
+      <a href="http://localhost:8080/posts/<%= post.id %>">See in Detail</a>
+      <!-- Link to edit the post -->
+      <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+      <br />
+      <!-- Form to delete the post, using the DELETE method via method-override -->
+      <form method="post" action="/posts/<%= post.id %>/?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </div>
+    <% } %>
+
+    <br />
+    <br />
+
+    <!-- Link to create a new post -->
+    <a href="http://localhost:8080/posts/new">Create New Post</a>
+  </body>
+</html>
