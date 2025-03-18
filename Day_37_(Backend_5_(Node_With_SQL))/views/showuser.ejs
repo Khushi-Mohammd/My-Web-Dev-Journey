@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users</title>
+    <style>
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="get" action="user/new">
+      <!-- Form to navigate to the new user page, method set to GET, action URL set to /user/new -->
+      <button>Add New User</button>
+      <!-- Button to navigate to the new user page -->
+    </form>
+    <br />
+    <table>
+      <!-- Table to display the list of users -->
+      <tr>
+        <th>ID</th>
+        <!-- Table header for user ID -->
+        <th>Username</th>
+        <!-- Table header for username -->
+        <th>Email</th>
+        <!-- Table header for email -->
+      </tr>
+      <% for (let user of users) { %>
+      <!-- Loop through the users array passed from the server-side code -->
+      <tr>
+        <td><%= user.id %></td>
+        <!-- Display user ID dynamically using EJS syntax -->
+        <td><%= user.username %></td>
+        <!-- Display username dynamically using EJS syntax -->
+        <td><%= user.email %></td>
+        <!-- Display email dynamically using EJS syntax -->
+        <td>
+          <form method="get" action="user/<%= user.id %>/edit">
+            <!-- Form to navigate to the edit user page, method set to GET, action URL set to /user/:id/edit -->
+            <button>Edit Username</button>
+            <!-- Button to navigate to the edit user page -->
+          </form>
+        </td>
+        <td>
+          <form method="get" action="user/<%= user.id %>/delete">
+            <!-- Form to navigate to the delete user page, method set to GET, action URL set to /user/:id/delete -->
+            <button>Delete User</button>
+            <!-- Button to navigate to the delete user page -->
+          </form>
+        </td>
+      </tr>
+      <% } %>
+      <!-- End of the loop -->
+    </table>
+  </body>
+</html>
