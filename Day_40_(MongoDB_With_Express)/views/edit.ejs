@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper rendering on mobile devices -->
+    <title>Edit Chat</title>
+    <!-- Title of the webpage -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Link to the external CSS file for styling -->
+  </head>
+  <body>
+    <h1 class="text-al-center">Edit your chat</h1>
+    <!-- Main heading of the page, centered using a CSS class -->
+
+    <!-- Container for the edit chat form -->
+    <div class="new-form-box text-al-center">
+      <!-- Display information about the chat being edited -->
+      <p>
+        This chat was sent from <b><%= chat.from %></b> to <b><%= chat.to %></b>
+        <!-- Display the sender (`chat.from`) and recipient (`chat.to`) of the chat -->
+      </p>
+
+      <!-- Form to edit the chat message -->
+      <form
+        method="post"
+        action="/chats/<%= chat._id %>?_method=PUT"
+        class="text-al-center"
+      >
+        <!-- Textarea to edit the message content -->
+        <textarea name="msg" class="input edit-msg text-area">
+<%= chat.msg %></textarea
+        >
+        <!-- Pre-fills the textarea with the current message content (`chat.msg`) -->
+        <br />
+        <br />
+        <button class="form-btns">Edit</button>
+        <!-- Button to submit the form and save the changes -->
+      </form>
+    </div>
+  </body>
+</html>
