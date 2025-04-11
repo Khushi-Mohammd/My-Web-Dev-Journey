@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper rendering on mobile devices -->
+    <title>New Chat</title>
+    <!-- Title of the webpage -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Link to the external CSS file for styling -->
+  </head>
+  <body>
+    <h1 class="text-al-center">Write new chat...</h1>
+    <!-- Main heading of the page, centered using a CSS class -->
+
+    <!-- Container for the new chat form -->
+    <div class="new-form-box">
+      <!-- Form to create a new chat -->
+      <form method="post" action="/chats" class="text-al-center">
+        <!-- Input field for the sender's name -->
+        <input
+          type="text"
+          placeholder="who are you"
+          name="from"
+          class="input"
+        />
+        <br />
+        <br />
+
+        <!-- Textarea for the message content -->
+        <textarea name="msg" class="input text-area">
+Write your message here</textarea
+        >
+        <!-- Placeholder text inside the textarea -->
+        <br />
+        <br />
+
+        <!-- Input field for the recipient's name -->
+        <input type="text" placeholder="add receiver" name="to" class="input" />
+        <br />
+        <br />
+
+        <!-- Button to submit the form and create the chat -->
+        <button class="form-btns">Create Chat</button>
+      </form>
+    </div>
+  </body>
+</html>

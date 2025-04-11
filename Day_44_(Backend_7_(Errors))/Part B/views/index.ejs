@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper rendering on mobile devices -->
+    <title>Mini WhatsApp</title>
+    <!-- Title of the webpage -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Link to the external CSS file for styling -->
+  </head>
+  <body>
+    <h1>All Chats!</h1>
+    <!-- Main heading of the page -->
+
+    <!-- Form to navigate to the "New Chat" creation page -->
+    <form method="get" action="/chats/new" class="new-form">
+      <button class="form-btns">New Chat</button>
+      <!-- Button to create a new chat -->
+    </form>
+
+    <!-- Container to display all chats -->
+    <div class="all-chats">
+      <!-- Loop through the `chats` array passed from the server -->
+      <% for (let chat of chats) { %>
+      <div class="chat">
+        <!-- Individual chat container -->
+        <p>From: <i><%= chat.from %></i></p>
+        <!-- Display the sender of the chat -->
+        <div class="msg">
+          <p><%= chat.msg %></p>
+          <!-- Display the message content -->
+        </div>
+        <p>Received by: <i><%= chat.to %></i></p>
+        <!-- Display the recipient of the chat -->
+
+        <!-- Display the time the chat was created -->
+        <p><%= chat.created_at.toString().split(" ")[4] %></p>
+        <!-- Extract and display the time (HH:MM:SS) -->
+
+        <!-- Display the date the chat was created -->
+        <p>
+          <%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %>
+          <!-- Extract and display the date in a readable format -->
+        </p>
+
+        <!-- Form to navigate to the "Edit Chat" page -->
+        <form
+          method="get"
+          action="/chats/<%= chat._id %>/edit"
+          class="chat-btns-form"
+        >
+          <button class="chat-btns">Edit</button>
+          <!-- Button to edit the chat -->
+        </form>
+
+        <!-- Form to delete the chat -->
+        <form
+          method="post"
+          action="/chats/<%= chat._id %>?_method=DELETE"
+          class="chat-btns-form"
+        >
+          <button class="chat-btns">Delete</button>
+          <!-- Button to delete the chat -->
+        </form>
+
+        <!-- Form to show a chat -->
+        <form
+          method="get"
+          action="/chats/<%= chat._id %>"
+          class="chat-btns-form"
+        >
+          <button class="chat-btns">Show</button>
+          <!-- Button to show the chat -->
+        </form>
+      </div>
+      <% } %>
+      <!-- End of the loop -->
+    </div>
+  </body>
+</html>
