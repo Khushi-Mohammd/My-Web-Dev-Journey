@@ -98,10 +98,18 @@ body {
   border: none;
 }
 
+.add-btn:hover {
+  background-color: #e13748;
+}
+
 /* Edit Page */
 .edit-btn {
   background-color: #fe424d;
   border: none;
+}
+
+.edit-btn:hover {
+  background-color: #e13748;
 }
 
 /* Show Page */
