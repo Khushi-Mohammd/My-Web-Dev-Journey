@@ -60,6 +60,7 @@ app.get("/", (req, res) => {
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
+  res.locals.currUser = req.user;
   next();
 });
 
@@ -87,6 +88,6 @@ app.use((err, req, res, next) => {
   // res.status(statusCode).send(message);
 });
 
-app.listen(8080, "0.0.0.0", () => {
+app.listen(8080, () => {
   console.log("server is listening to port 8080");
 });
