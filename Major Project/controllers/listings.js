@@ -25,7 +25,6 @@ module.exports.showListing = async (req, res) => {
     res.redirect("/listings");
   }
 
-  console.log(listing);
   res.render("listings/show.ejs", { listing });
 };
 
@@ -33,10 +32,21 @@ module.exports.createListing = async (req, res, next) => {
   let url = req.file.path;
   let filename = req.file.filename;
 
+  const fetchUrl = `https://api.opencagedata.com/geocode/v1/geojson?q=${encodeURIComponent(
+    req.body.listing.location
+  )}&key=${process.env.MAP_API_KEY}&limit=1`;
+
+  const response = await fetch(fetchUrl);
+  const data = await response.json();
+
   const newListing = new Listing(req.body.listing);
   newListing.owner = req.user._id;
   newListing.image = { url, filename };
-  await newListing.save();
+
+  newListing.geometry = data.features[0].geometry;
+
+  let savedListing = await newListing.save();
+  console.log(savedListing);
   req.flash("success", "New Listing Created!");
   res.redirect("/listings");
 };
@@ -50,12 +60,23 @@ module.exports.renderEditForm = async (req, res) => {
     res.redirect("/listings");
   }
 
-  res.render("listings/edit.ejs", { listing });
+  let originalImageUrl = listing.image.url;
+  originalImageUrl = originalImageUrl.replace("/upload", "/upload/w_250");
+
+  res.render("listings/edit.ejs", { listing, originalImageUrl });
 };
 
 module.exports.updateListing = async (req, res) => {
   let { id } = req.params;
-  await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+  let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+
+  if (typeof req.file !== "undefined") {
+    let url = req.file.path;
+    let filename = req.file.filename;
+    listing.image = { url, filename };
+    await listing.save();
+  }
+
   req.flash("success", "Listing Updated!");
   res.redirect(`/listings/${id}`);
 };
