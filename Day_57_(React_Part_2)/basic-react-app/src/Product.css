@@ -1,0 +1,13 @@
+.Product {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 0 15px 0 15px;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+.Product:hover {
+  box-shadow: 1px 1px 10px 2px white;
+  transform: scale(1.02);
+}
